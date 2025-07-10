@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Steam famous Games</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="headline">
+            <i class="fab fa-steam"></i>
+            <h1>This is a list of the Top Selling Video Games. Updated in real-time</h1>
+        </div>
+        <div id="famous" class="tab-content">
+            <h2>Famous Games</h2>
+            <ul id="famous-list"></ul>
+        </div>
+        <script>
+            async function loadFamous() {
+                const res = await fetch('/api/famous');
+                const data = await res.json();
+                const list = document.getElementById('famous-list');
+                list.innerHTML = '';
+                data.forEach(item => {
+                    list.innerHTML += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+                });
+            }
+            loadFamous();
+            setInterval(loadFamous, 300000);
+        </script>
+    </body>
+</html>

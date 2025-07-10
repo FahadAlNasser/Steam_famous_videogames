@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.headline {
+    padding: 20px;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline i {
+    font-size: 48px;
+    color: #00adee;
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.tabs {
+    margin-top: 20px;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #00adee;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
